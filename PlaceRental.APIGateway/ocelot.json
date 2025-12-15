@@ -1,0 +1,28 @@
+{
+  "Routes": [
+    {
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "UpstreamPathTemplate": "/users/{everything}",
+      "DownstreamPathTemplate": "/api/users/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7293
+        }
+      ]
+    },
+    {
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "UpstreamPathTemplate": "/places/{everything}",
+      "DownstreamPathTemplate": "/api/places/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    }
+  ]
+}

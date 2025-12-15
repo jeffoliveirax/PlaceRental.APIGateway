@@ -1,0 +1,28 @@
+@PlaceRental.APIGateway_HostAddress = http://localhost:5006
+@UserId = 2
+
+GET {{PlaceRental.APIGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{PlaceRental.APIGateway_HostAddress}}/users/{{UserId}}
+Content-Type: application/json
+
+### 
+
+POST {{PlaceRental.APIGateway_HostAddress}}/users/
+Content-Type: application/json
+
+{
+  "fullName": "Usuário ABC",
+  "email": "usuarioabc@mail.com",
+  "birthDate": "2024-06-21T16:34:44.759Z",
+  "password": "UsuarioAbc@Us3R",
+  "role": "user"
+}
+
+###
+
+GET {{PlaceRental.APIGateway_HostAddress}}/places/1
+Accept: application/json
